@@ -10,6 +10,7 @@ You can click the Preview link to take a look at your changes.
 --->
 
 My vim configuration
+```
 set showmode
 set number
 set laststatus=2
@@ -65,3 +66,4 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+```
