@@ -36,6 +36,9 @@ Plugin 'puremourning/vimspector'
 Plugin 'rust-lang/rust.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'mileszs/ack.vim'
+Plugin 'preservim/nerdtree'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'skywind3000/gutentags_plus'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 syntax on
@@ -66,4 +69,19 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+" ctags
+" enable gtags module
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
+
+" config project root markers.
+let g:gutentags_project_root = ['.root']
+
+" generate datebases in my cache directory, prevent gtags files polluting my
+" project
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+" change focus to quickfix window after search (optional).
+let g:gutentags_plus_switch = 1
 ```
